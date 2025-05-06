@@ -25,9 +25,15 @@ class Teacher extends Person {
         return "professor" + " " + super.FullName;
     }
 }
+class Principle extends Person {
+    get FullName() {
+        return "Principle" + " " + super.FullName;
+    }
+}
 printNames([
     new Student(1, "Ankit", "Singh"),
-    new Teacher("Ashwanee", "Gupta")
+    new Teacher("Ashwanee", "Gupta"),
+    new Principle("Nitin", "Singh")
 ]);
 function printNames(people) {
     for (let person of people)
