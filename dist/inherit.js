@@ -20,8 +20,17 @@ class Student extends Person {
         console.log("Student Is Talking");
     }
 }
-let student = new Student(1, "Nitin", "Singh");
-console.log(student.FullName);
-console.log(student.walk());
-console.log(student.talk());
+class Teacher extends Person {
+    get FullName() {
+        return "professor" + " " + super.FullName;
+    }
+}
+printNames([
+    new Student(1, "Ankit", "Singh"),
+    new Teacher("Ashwanee", "Gupta")
+]);
+function printNames(people) {
+    for (let person of people)
+        console.log(person.FullName);
+}
 //# sourceMappingURL=inherit.js.map
