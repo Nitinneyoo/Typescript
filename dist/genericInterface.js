@@ -19,4 +19,15 @@ class Store {
 const store = new Store();
 store.addProduct({ name: "Laptop", price: 1000, category: "Electronics" });
 store.addProduct({ name: "Shoes", price: 50, category: "Fashion" });
+class Compressibletore extends Store {
+    compress() {
+        console.log("Compressing products...");
+    }
+}
+class SearchableStore extends Store {
+    find(name) {
+        return this.getProducts().find(product => product.name === name);
+    }
+}
+const searchableStore = new SearchableStore();
 //# sourceMappingURL=genericInterface.js.map
